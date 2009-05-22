@@ -1,0 +1,19 @@
+#ifndef _ALPHABETS_
+#define _ALPHABETS_
+
+#include "Alphabet.h"
+#include "AbstractAlphabet.h"
+#include "NucleicAlphabet.h"
+#include "ProteicAlphabet.h"
+#include "CodonAlphabet.h"
+#include "StandardCodonAlphabet.h"
+#include "VertebrateMitochondrialCodonAlphabet.h"
+#include "InvertebrateMitochondrialCodonAlphabet.h"
+#include "EchinodermMitochondrialCodonAlphabet.h"
+#include "DNA.h"
+#include "RNA.h"
+#include "DefaultAlphabet.h"
+#include "AlphabetExceptions.h"
+#include "AlphabetTools.h"
+
+#endif //_ALPHABETS_

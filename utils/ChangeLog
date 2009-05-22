@@ -1,0 +1,108 @@
+15/05/09 Julien Dutheil
+* New class KeyvalTools, with helper function for the key=val syntax.
+
+06/05/09 Julien Dutheil
+* New methods startsWith and endsWith in TextTools.
+
+16/01/09 Sylvain Gaillard
+* Static variable terminalWidth and terminalSplit in ApplicationTools.
+* Added message before the gauge in ApplicationTools::displayGauge.
+* Fixed displayTask, displayResult and displayGauge to use terminalWidth and
+  terminal Split.
+
+05/01/09 Julien Dutheil
+* Corrections for compilation with gcc 4.3.2.
+
+11/12/08 -*- Version 1.3.1 -*-
+
+10/12/08 Sylvain Gaillard
+* New gauge output for ApplicationTools::displayGauge
+
+04/08/08 Julien Dutheil
+ Function parameterExists now check that the parameter value is not empty.
+
+21/07/08 -*- Version 1.3.0 -*-
+
+19/06/08 Julien Dutheil
+* Added support for PGF format (GraphicDevice).
+
+18/06/08 Julien Dutheil
+* AttributeTools class was reorganized, so that shell variables can now be
+'global' and not only 'local'. New 'parseOptions' helper function.
+
+14/04/08 Julien Dutheil
+* Added the ColorSet interfaces and classes (Default, R, Molscript and Dvips).
+* New tools in TextTools and ColorTools.
+
+07/04/08 Julien Dutheil
+* Added class Vector as a wrapper to stl::vector supporting the Clonable
+interface.
+
+03/04/08 Julien Dutheil
+* StringTokenizer now has a allowEmptyTokens option.
+
+31/03/08 Sylvain Gaillard
+* New methods isNewLineCharacter(c), removeNewLines(s) and
+removeLastNewLines(s) in TextTools.
+
+10/03/08 Julien Dutheil
+* Added new vector graphic components (XFig and SVG format).
+
+18/01/08 -*- Version 1.2.0 -*-
+
+09/01/08 Julien Dutheil
+* Class String has been moved to file BppString to prevent a windows
+compilation error.
+* All classes included in the new 'bpp' namespace.
+
+03/11/07 Julien Dutheil
+* ApplicationTools::displayResult() is now a template function for the result
+  type.
+
+23/10/07 Julien Dutheil
+* AttributeTools: added support for nested inclusions in option files.
+  Using param=file2 in a file file1 allows to include the options of file2 to the
+	one of file1.
+* ApplicationTools: added support for value range in getVectorParameter:
+34,22,2:5,67,100:104 will now result in 34,22,2,3,4,5,67,100,101,102,103,104.
+
+03/10/07 Julien Dutheil
+* Bug fixed: added reference in ApplicationTools::getStringParameter().
+
+6/07/07 -*- Version 1.1.0 -*-
+
+16/06/07 Julien Dutheil
+* New method removeEmptyTokens() in StringTokenizer.
+
+02/06/07 Julien Dutheil
+* Class Number improved: default value in constructor + operator=(type).
+
+15/05/07 Julien Dutheil
+* Added support for variable in AttributesTools: one can recall fields by
+  using $(FIELDNAME).
+
+19/01/07 -*- Version 1.0.3 -*-
+
+19/01/07 Julien Dutheil
+* Update of Exceptions code.
+* Update of String and Number classes (covariant return in clone() function)
+
+16/09/06 Julien Dutheil
+* Option files:
+  - Multiline option files parsing enabled.
+  - C++ (single line) comments restored.
+
+28/08/06 -*- Version 1.0.2 -*-
+
+22/05/06 Julien Dutheil
+* Bug fixed in StringTokenizer (x64).
+* New function TextTools::count(s, pattern).
+
+04/05/06 Julien Dutheil
+* New String.h class.
+
+18/04/06 -*- Version 1.0.1 -*-
+
+09/03/06 Julien Dutheil
+* use string::size_type instead of unsigned int in AttributesTools.cpp -> bug correction on x64 
+

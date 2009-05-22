@@ -1,0 +1,64 @@
+15/04/09 Sylvain Gaillard
+* Moved to UTF8 encoding
+* Fixed computations in Fu & Li D statistics
+
+08/04/09 Sylvain Gaillard
+* Fixed calls to Seq::SymbolListTools::getCounts
+
+31/03/09 Sylvain Gaillard
+* Fixed Doxygen documentation @author tags
+* Fixed warnings in bpp::DarwinDon::write bpp::DarwinVarSingle::write and
+  bpp::MonolocusGenotypeTools::buildMonolocusGenotypeByAlleleKey
+
+19/01/09 Sylvain Gaillard
+* Fixed bug in PolymorphismSequenceContainerTools::getSelectedSequences now
+  set the sequence count properly.
+
+16/01/09 Sylvain Gaillard
+* Fixed methode PolymorphismSequenceContainerTools::extractGroup which now
+  return the extracted group and not all groups but the extracted one.
+
+08/01/09 Sylvain Gaillard
+* New methode sample in PolymorphismSequenceContainerTools.
+* Extend main page doxygen documentation.
+* A bit of cleaning.
+
+07/01/09 Céline Scornavacca & Julien Dutheil
+* Bug fixed in clone method of PolymorphismSequenceContainer.
+
+21/07/08 -*- Version 1.3.1 -*-
+
+10/11/08 Sylvain Gaillard
+* Fixed a bug in DataSet::getGroupName().
+
+21/07/08 -*- Version 1.3.0 -*-
+
+09/04/08 Sylvain Gaillard
+* Added DarwinDon and DarwinVarSingle output class.
+
+04/04/08 Sylvain Gaillard
+* Added MultiAlleleMonolocusGenotype and MonolocusGenotypeTools class.
+* Added GeneMapperCsvExport input class.
+
+01/04/08 Sylvain Gaillard
+* Fixed bug in SequenceStatistics::DVH (thanks to Alicia).
+
+18/01/08 -*- Version 1.2.0 -*-
+
+12/01/08 Julien Dutheil
+* Compatibility update: inclusion in namespace bpp + code update.
+
+06/07/07 -*- Version 1.1.1 -*-
+
+15/05/07 Julien Dutheil
+* Compatibility update (NumCalc).
+* PopGenLib does not depend anymore on PhylLib.
+* Coord and Locality classes code improved.
+
+28/08/06 -*- Version 1.1.0 -*-
+
+21/06/06 Khalid Belkhir
+* Nouvelles fonctionnalités pour les permutations.
+* Ajout Fstat multilocus.
+* Construction de matrices de distances.
+* Correction de bugs

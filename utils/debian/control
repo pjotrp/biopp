@@ -1,0 +1,21 @@
+Source: libbpp-utils
+Section: libs
+Priority: optional
+Maintainer: Julien Dutheil <jdutheil@daimi.au.dk>
+Build-Depends: debhelper (>= 5), autotools-dev
+Standards-Version: 3.7.2
+
+Package: libbpp-utils-dev
+Section: libdevel
+Architecture: any
+Depends: libbpp-utils (= ${source:Version})
+Description: The Bio++ Utils library development files.
+ Contains the Bio++ core classes and tools.
+
+Package: libbpp-utils
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: The Bio++ Utils library.
+ Contains the Bio++ core classes and tools.
+

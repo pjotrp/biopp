@@ -1,0 +1,8 @@
+#include "DiscreteDistribution.h"
+#include "AbstractDiscreteDistribution.h"
+#include "GammaDiscreteDistribution.h"
+#include "ExponentialDiscreteDistribution.h"
+#include "SimpleDiscreteDistribution.h"
+#include "ConstantDistribution.h"
+#include "InvariantMixedDiscreteDistribution.h"
+

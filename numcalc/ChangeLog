@@ -1,0 +1,229 @@
+15/05/09 Julien Dutheil
+* New interface and abstract class ParameterAliasable, extending
+Parametrizable and adding support for parameter alias functions.
+* Keyval tools in NumCalcApplicationTools have been moved to a dedicated class
+in bpp-utils.
+* Bug fixed in numerical derivatives when a parameter constraint is matched.
+* Several minor interface updates.
+* Several code updates, changing _privatevar to privatevar_ in many places.
+
+12/05/09 Julien Dutheil
+* ParameterList now outputs references instead of pointer.
+* Update of AbstractParametrizable, with now private field and protected
+access method.
+* New support for parameter namespace in Parametrizable and implemented in
+AbstractParametrizable.
+
+27/04/09 Julien Dutheil
+* Bug fixed in shannon variability index (when a frequency is 0).
+
+17/04/09 Julien Dutheil
+* New class FunctionTools and ParameterGrid.
+* New functions in NumCalcApplicationTools to support the keyval 
+  option scheme.
+
+29/03/09 Julien Dutheil
+* New class ParameterListener
+* Interface Parametrizable now supports "aliasing", with a default
+  implementation in AbstractParametrizable, which is now in a separate file.
+* Bug fixed in numerical derivatives, derivatives correctly updated when other
+  methods than setParameters are called.
+* Several other implementation improvements...
+* Code updates (started to convert '_' prefixes into suffixes).
+
+05/02/09 Julien Dutheil
+* Bug fixed in EigenValue + code formating and improvement.
+* New class TestUnit.
+
+03/02/09 Julien Dutheil
+* New classes TransformedParameter and ReparametrizationFunctionWrapper, to
+  perform optimization without constraint.
+* Creation of class NumConstants, and code updated accordingly.
+
+16/01/09 Sylvain Gaillard
+* Added new class NumCalcApplicationTools which provides application
+  facilities depending on NumCalc class.
+
+21/12/08 Julien Dutheil
+* Bug fixed when there is only one class in GammaDiscreteDistribution.
+
+21/07/08 -*- Version 1.6.0 -*-
+
+12/11/08 Sylvain Gaillard
+* New functions seq, breaks, range and nclassScott in VectorTools.
+
+07/11/08 Julien Dutheil
+* New function randMultinomial in RandomTools.
+
+07/11/08 Sylvain Gaillard
+* Fixed a bug in RandomTools::getSample.
+
+06/11/08 Sylvain Gaillard
+* Added boolean flag in RandomTools::getSample for sampling with replacement.
+This function now throw IndexOutOfBoundsException if size of the sample is
+higher than the original vector size and replacement is off.
+
+28/10/08 Julien Dutheil
+* New Numerical cross derivatives (3 points method only).
+* New functions in NumTools to compute Hessian matrices.
+
+21/07/08 -*- Version 1.5.0 -*-
+
+04/04/08 Sylvain Gaillard
+* New function paste in VectorTools.
+
+03/04/08 Sylvain Gaillard & Julien Dutheil
+* New functions whichAll and countValues in VectorTools.
+* Parametrizable now have a getNumberOfParameters method.
+* New function getRow in DataTable.
+
+18/03/08 Julien Dutheil
+* Added StatTest interface.
+* Added function RandomTools::pChisq and pGamma.
+* VectorTools::median now properly works.
+
+31/01/08 Julien Dutheil
+* Bug fixed in exponential law.
+
+18/01/08 -*- Version 1.4.0 -*-
+
+18/01/08 Celine Scornavacca & Julien Dutheil
+* New functions containsAll and diff in VectorTools.
+
+09/01/08 Julien Dutheil
+* All classes included in the new 'bpp' namespace.
+
+13/12/07 Julien Dutheil
+* New method uniRoot in NumTools.
+
+24/12/07 Julien Dutheil
+* New class InvariantMixedDiscreteDistribution.
+
+05/12/07 Julien Dutheil
+* Bug fixed in recopy of MetaOptimizer.
+
+24/11/07 Julien Dutheil
+* Another bug fixed in numerical derivatives!
+
+13/11/07 Julien Dutheil
+* New class ExponentialDiscreteDistribution + bug fixed in Gamma when classes
+are not distinguishables.
+
+24/10/07 Julien Dutheil
+* Added missing references in VectorTools + new methods 'append'.
+
+22/10/07 Julien Dutheil
+* Numerical derivatives improved.
+* Bug fixed in UniformK01, now works on 64bits computers! 
+
+18/10/07 Julien Dutheil
+* Added new MetaOptimizer class.
+
+24/09/07 Julien Dutheil
+* New union and intersection functions in VectorTools.
+
+24/08/07 Julien Dutheil
+* New method getParameter(name) in interface Parametrizable.
+
+24/07/07 Julien Dutheil
+* VectorTools function templates updated and simplified. New weighted
+  functions (mean, var, cov, cor, etc.)
+* NumTools is now a fully templated static class.
+
+06/07/07 -*- Version 1.3.0 -*-
+
+16/06/07 Julien Dutheil
+* DataTable is now Clonable, with appropriate copy constructor and assigment
+operator.
+
+29/05/05 Julien Dutheil
+* Numerical derivative improved.
+
+26/05/07 Julien Dutheil
+* Conjugate gradient method added + numerical derivative classes improved.
+* New nmerical derivatives "two points" method.
+
+04/05/07 Nicolas Galtier & Julien Dutheil
+* Namespace VectorFunction is removed, and static class VectorTools used
+instead.
+* New container functions in VectorTools.
+
+18/04/07 Julien Dutheil
+* Optimizers are now event-driven. AbstractOptimizer class improved.
+* Constraint support in class Parameter improved: pointer is no more constant,
+	and the constraint may be attached or not (the default, previous behaviour).
+
+11/04/07 Julien Dutheil
+* DirectionFunction improved and in a sperate class.
+  Powel optimizer modified and improved.
+* Function classes augmented: new methods enableFirst(Second)OrderDerivatives.
+  Numerical derivatives classes improved: faster computation, no analytical
+	derivatives computed when computing function at other points.
+
+03/04/07 Benoît Nabholz & Julien Dutheil
+* Bug fixed in numerical derivatives classes: derivatives properly computed
+  when constraint matched.
+* New method setConstraint in class Parameter.
+
+02/04/07 Julien Dutheil
+* VIRTUAL_COV variable changed to NO_VIRTUAL_COV. configure.ac file updated.
+  => Default behaviour is now /really/ to use covariant return type with
+	virtual inheritence, even when importing the files in an IDE. To use the old
+	compilers behaviour, one must set the NO_VIRTUAL_COV preproc variable.
+* Optimizer interface now has a 'isInitialized' method, and send an exception
+  when attempting to optimize without properly initializing the optimizer.
+	Similar behaviour is set for the setInitialInterval method in
+	one-dimensional optimizers.
+
+19/02/07 Julien Dutheil
+* Parametrizable interface now inherits from Clonable.
+
+19/01/07 -*- Version 1.2.0 -*-
+
+30/12/06 Julien Dutheil
+* --enable-virtual-cov option in configure, set to yes by default.
+* The Function interface now inherits from Clonable (bpp-utils).
+* Constraint interface now inherits from Clonable.
+* Optimizer interface now inherits from Clonable.
+* OptimizationStopCondition interface now inherits from Clonable.
+* Bug fixed in RowMatrix<T>: double changed to T in resize function. 
+
+24/11/06 Julien Dutheil
+* New function randC in DiscreteDistribution.
+
+26/10/06 Benoît Nabholz
+* New median function in VectorTools.
+
+28/08/06 -*- Version 1.1.0 -*-
+
+17/08/06 Julien Dutheil
+* Corrected method name in InfinityWrapper function: getParameter->getParameterValue.
+* New classes for numerical derivative computations: 3 and 5 points methods.
+
+07/08/06 Julien Dutheil
+* New function kroneckerMult and kroneckerSum in MatrixTools.
+* New function kroneckerMult in VectorTools.
+* Namespaces VectorStatTools was merged with VectorFunctions.
+* All functions and operator in VectorTools are templates.
+  Removed overrding with Vdouble, and use template specialisation for
+  <InputType,OutputType> and <IntputType,OutputType=InputType>.
+* New operators "scalar [+-*/] vector" in VectorTools.
+
+01/06/06 Julien Dutheil
+* new operators (string,int) and (int,string) in DataTable.
+
+22/05/05 Julien Dutheil
+* [Row,Column,""]NameNotFoundException now displays the invalid name in what().
+
+07/05/06 Julien Dutheil
+* Domain.getIndex now has unsigned int return type.
+
+02/05/06 Julien Dutheil
+* Added methods hasColumn and hasRow in DataTable.
+
+18/04/06 -*- Version 1.0.1 -*-
+
+18/04/06 Julien Dutheil
+* Eigen: Bug fixed in header file.
+* RandomTools: Changed default generator for compatibility with x64.
+
